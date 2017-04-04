@@ -1,0 +1,90 @@
+.custom-confirmation-dialog{
+	width:350px;
+	height: 250px;
+	padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: -300px;
+    margin: auto;
+    background-color: white;
+    /* display: none; */
+    opacity: 0;
+    -webkit-transition: all .25s;
+    -moz-transition: all .25s;
+    -ms-transition: all .25s;
+    -o-transition: all .25s;
+    transition: all .25s;
+}
+.custom-confirmation-dialog.active{
+	z-index:1000 !important;
+    opacity:1 !important;
+    bottom:0 !important;
+    box-shadow: 1px 10px 50px grey !important;
+}
+.custom-confirmation-dialog #logo{
+	height: 130px;
+    font-size: 90px;
+    text-align: center;
+    color: white;
+    background-color: rgb(243, 151, 0);
+    line-height: 130px;
+}
+.custom-confirmation-dialog #text{
+	text-align: center;
+    height: 70px;
+    font-size: 20px;
+    color: rgb(243, 151, 0);
+    font-family: 'Montserrat', sans-serif;
+    line-height: 70px;
+}
+.custom-confirmation-dialog #button #btnCancel{
+	width: 130px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    /* background-color: #D0D0D0; */
+    color: rgb(243, 151, 0);
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 5px;
+    float: left;
+    cursor: pointer;
+    margin-left: 30px;
+    /* margin-bottom: 5px; */
+    font-size: 12px;
+    border: 1px solid rgb(243, 151, 0);
+    -webkit-transition: all .25s;
+       -moz-transition: all .25s;
+        -ms-transition: all .25s;
+         -o-transition: all .25s;
+            transition: all .25s;
+}
+.custom-confirmation-dialog #button #btnCancel:hover{
+	background-color: rgb(243, 151, 0);
+	color: white;
+}
+.custom-confirmation-dialog #button #btnYes{
+	width: 130px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    /* background-color: #F06A5E; */
+    color: rgb(243, 151, 0);
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 5px;
+    float: right;
+    cursor: pointer;
+    margin-right: 30px;
+    font-size: 12px;
+    border: 1px solid rgb(243, 151, 0);
+    -webkit-transition: all .25s;
+       -moz-transition: all .25s;
+        -ms-transition: all .25s;
+         -o-transition: all .25s;
+            transition: all .25s;
+}
+.custom-confirmation-dialog #button #btnYes:hover{
+	background-color: rgb(243, 151, 0);
+	color: white;
+}

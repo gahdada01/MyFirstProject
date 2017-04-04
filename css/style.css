@@ -1,0 +1,1550 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+html{
+	width:100%;
+	height: 100%;
+}
+body{
+	width:100%;
+	height:100%;
+	font-family: arial,helvetica,clean,sans-serif;
+	overflow: hidden;
+}
+.container{
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	position: absolute;
+	/*min-width:1900px;*/
+}
+#containerHeaderWrapper{
+	width:100%;
+	height:70px;
+	background-color:#222;
+}
+
+#containerBodyWrapper{
+	width:100%;
+	height:calc(100% - 70px);
+	display: inline-block;
+}
+#leftPanelWrapper{
+	width:150px;
+	height:100%;
+	background-color: #F5F5F5;
+	display: inline-block;
+}
+#leftPanelWrapper .items{
+	width:100%;
+	height:150px;
+	color: #CCCCCC;
+	line-height: 150px;
+	text-align: center;
+	cursor:pointer;
+	border-bottom: 1px solid #E4E4E4;
+	vertical-align: middle;
+	position: relative;
+
+	-webkit-transition: all .25s;
+	   -moz-transition: all .25s;
+	    -ms-transition: all .25s;
+	     -o-transition: all .25s;
+	        transition: all .25s;
+}
+#leftPanelWrapper .items.active{
+	color: #f39700;
+	box-shadow: inset 7px 0 0px rgb(243, 151, 0);
+	background-color: white;
+}
+#leftPanelWrapper .items .fa{
+	font-size: 50px;
+}
+.itemIconWrapper{
+	width:100%;
+	height: 70px;
+	text-align: center;
+}
+.itemLabel{
+	width:100%;
+	height:80px;
+	line-height: 80px;
+	text-align: center;
+}
+#appName{
+	font-size: 20px;
+	color:#9DA5B4;
+	height:100%;
+	line-height: 70px;
+	margin-left:50px;
+	text-align: left;
+	font-family: 'Montserrat', sans-serif;
+	letter-spacing: 2px;
+}
+#appName::first-letter { 
+    color: #f39700;
+}
+#rightPanelWrapper{
+	/*width: calc(107% - 150px);*/
+	width: calc(100% - 0px);
+	height: 100%;
+	display: inline-block;
+	/*float:right;
+	min-width: 1280px;*/
+	min-width: 1175px;
+}
+#hideStop {
+    font-size: 15px;
+    float: right;
+    color: #f39700;
+    height: 50px;
+    cursor: pointer;
+    line-height: 50px;
+    margin-top: 25px;
+     vertical-align: middle; 
+}
+#hideStop input[type="radio"] {
+    cursor: pointer;
+}
+
+.itemContentWrapper{
+	width:calc(100% - 100px);
+	height: calc(100% - 100px);
+	display:none;
+	padding:50px;
+	position: relative;
+}
+.itemContentWrapper.active{
+	display:block;
+}
+.contentHeader{
+	width:100%;
+	height:100px;
+	line-height: 100px;
+	font-family: 'Source Code Pro';
+	font-size: 40px;
+	color: #333335;
+	border-bottom: 1px solid #F5F5F5;
+}
+#addAccountButton,#addApplicationButton{
+	float: right;
+    height: 50px;
+    color: #f39700;
+    cursor: pointer;
+    line-height: 50px;
+    font-size: 20px;
+    width: 300px;
+    text-align: center;
+    font-family: Source Code Pro;
+    vertical-align: middle;
+    margin-top: 25px;
+}
+.contentBody{
+	width:100%;
+	height:calc(100% - 100px);
+	display: -webkit-inline-flex !important;
+  	display:         inline-flex !important;
+
+ 	-webkit-align-items: center !important;
+        align-items: center !important;
+
+  	-webkit-justify-content: center !important;
+        justify-content: center !important;
+}
+#accountListWrapper{
+	width:100%;
+	height: 100%;
+}
+
+#accountListWrapper #accountListHeader{
+	width:100%;
+	height: 70px;
+	line-height: 70px;
+	background-color: #ffce80;
+}
+#accountListWrapper #accountListHeader div{
+	float: left;
+}
+
+/*Joann
+ACCOUNT LIST HEADER AREA**/
+
+#accountListWrapper #accountListHeader div:first-child{
+	width: calc(54% - 50px);
+	color: #333335;
+	text-align: left;
+	font-family: 'Montserrat', sans-serif;
+	display: inline-block;
+	padding-left:50px;
+}
+#accountListWrapper #accountListHeader div:nth-child(2){
+	width: 8%;
+	color: #333335;
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+	display: inline-block;
+}
+#accountListWrapper #accountListHeader div:nth-child(3){
+	width: 8%;
+	color: #333335;
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+	display: inline-block;
+}#accountListWrapper #accountListHeader div:nth-child(4){
+	width: 8%;
+	color: #333335;
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+	display: inline-block;
+}
+#accountListWrapper #accountListHeader div:nth-child(5){
+	width: 5%;
+	color: #333335;
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+	display: inline-block;
+}#accountListWrapper #accountListHeader div:nth-child(6){
+	width: 5%;
+	color: #333335;
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+	display: inline-block;
+}
+#accountListWrapper #accountListHeader div:nth-child(7){
+	width: 12%;
+	color: #333335;
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+	display: inline-block;
+	min-width: 11%;
+}
+#accountList{
+	width: 100%;
+    height: calc(100% - 70px);
+    overflow-y: scroll;
+    font-size: 25px;
+    color: #bfbfbf;
+    text-align: center;
+    line-height: 100px;
+    font-family: 'Source Code Pro';
+}
+
+/*Joann
+ACCOUNTS**/
+.account{
+	width: 100%;
+	/*width: 40%;*/
+	height:50px;
+	text-align: center;
+	line-height: 50px;
+	font-family: 'Roboto';
+	border-bottom: 1px solid white;
+	color: #595959;
+	font-size:15px;
+	-webkit-transition: all .25s;
+	   -moz-transition: all .25s;
+	    -ms-transition: all .25s;
+	     -o-transition: all .25s;
+	        transition: all .25s;
+}
+.account:hover{
+	background-color: #ffe2b3;
+}
+.accountName{
+	width: calc(54% - 50px);
+	height: 100%;
+	float: left;
+	text-align: left;
+	padding-left:50px;
+}
+.startPeriod{
+	width: 8%;
+	float: left;
+	height: 50px;
+    cursor: pointer;
+}
+
+.startPeriodV{
+	width: 8%;
+	float: left;
+	height: 50px;
+    cursor: pointer;
+}
+
+.startPeriodDisplay{
+	cursor: pointer;
+	border: none;
+	text-align: center;
+    font-size: inherit;
+    font-style: italic;
+    color: #595959;
+    /*width: 5.5%;*/
+    width: 100px;
+	/*float: left;
+	height: 50px;*/
+	/*padding: 0 16px;*/
+	background: transparent;
+}
+.startPeriodDisplayV{
+	cursor: pointer;
+	border: none;
+	text-align: center;
+    font-size: inherit;
+    font-style: italic;
+    color: #595959;
+    /*width: 5.5%;*/
+    width: 100px;
+	/*float: left;
+	height: 50px;*/
+	/*padding: 0 16px;*/
+	background: transparent;
+}
+#start{
+	width: 20px;
+}
+#startDatepicker{
+	cursor: pointer;
+	border: none;
+	text-align: center;
+    font-size: inherit;
+    font-style: italic;
+    color: #595959;
+    width: 95px;
+}
+
+/*hover*/
+input.startPeriodDisplay:hover {
+    /*background-color: #ffe2b3;*/
+    color: #f39700;
+}
+input.startPeriodDisplayV:hover {
+    /*background-color: #ffe2b3;*/
+    color: #f39700;
+}
+input.periodDisplay:hover {
+    /*background-color: #ffe2b3;*/
+    color: #f39700;
+}
+input.periodDisplayV:hover {
+    /*background-color: #ffe2b3;*/
+    color: #f39700;
+}
+i.fa.fa-plus:hover {
+	color: #f39700;
+}
+.endDate{
+    width: 8%;
+	float: left;
+	height: 50px;
+    cursor: pointer;
+}
+.endDateV{
+    width: 8%;
+	float: left;
+	height: 50px;
+    cursor: pointer;
+}
+.periodDisplay{
+/*	cursor: pointer;*/
+	border: none;
+	text-align: center;
+    font-size: inherit;
+    font-style: italic;
+    color: #595959;
+    /*width: 95px;*/
+    width: 100px;
+	/*float: left;
+	height: 50px;*/
+	/*padding: 0 16px;*/
+	background: transparent;
+}
+.periodDisplayV{
+/*	cursor: pointer;*/
+	border: none;
+	text-align: center;
+    font-size: inherit;
+    font-style: italic;
+    color: #595959;
+    /*width: 95px;*/
+    width: 100px;
+	/*float: left;
+	height: 50px;*/
+	/*padding: 0 16px;*/
+	background: transparent;
+}
+.addplaceButtonWrapper{
+	width: 8%;
+	height:100%;
+	float: left;
+	cursor: pointer;
+}
+.viewButtonWrapper{
+	width: 5%;
+	height:100%;
+	float: left;
+	cursor: pointer;
+}
+.viewButtonWrapper .fa{
+	cursor: pointer;
+}
+.viewButtonWrapper .fa:hover{
+	color: #f39700;
+}
+.editButtonWrapper{
+	width:5%;
+	height:100%;
+	float: left;
+	cursor: pointer;
+}
+.editButtonWrapper .fa{
+	cursor: pointer;
+}
+.editButtonWrapper .fa:hover{
+	color: #f39700;
+}
+.statusWrapper{
+	width:12%;
+	height:100%;
+	float: left;
+}
+#profile_Content{
+	height: 100%;
+}
+.inputField{
+	width:calc(100% - 2px);
+}
+.inputLabel{
+	height:40px;
+	line-height: 40px;
+	font-family: 'Montserrat', sans-serif;
+	color:#999999;
+	font-size:13px;
+}
+.inputLabel.error{
+	color: tomato;
+}
+.inputBox{
+	width:100%;
+	position: relative;
+}
+.inputBox input{
+	width: calc(100% - 20px);
+	height:100%;
+	border:1px solid #cccccc;
+	font-size: 13px;
+	font-family: 'Roboto';
+	color:#999999;
+	padding:10px;
+	-webkit-transition: all .25s;
+	   -moz-transition: all .25s;
+	    -ms-transition: all .25s;
+	     -o-transition: all .25s;
+	        transition: all .25s;
+}
+.inputBox input.error{
+	border:1px solid tomato;
+}
+.inputBox input:focus{
+	outline:none;
+	border:1px solid #f39700;
+	color: #f39700;
+	font-weight: bold;
+}
+
+.account .fa-spinner{
+	color: #333335;
+	font-size: 20px;
+	-webkit-animation-name: spin;
+    -webkit-animation-duration: 1000ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spin;
+    -moz-animation-duration: 1000ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spin;
+    -ms-animation-duration: 1000ms;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+    
+    animation-name: spin;
+    animation-duration: 1000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@-ms-keyframes spin {
+    from { -ms-transform: rotate(0deg); }
+    to { -ms-transform: rotate(360deg); }
+}
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+#acccountContentHeader{
+	width:100%;
+	height:50px;
+	position: relative;
+}
+#accountAppList{
+	height:calc(100% - 5px);
+	width:100%;
+	overflow-y:scroll;
+	padding-top: 5px;
+}
+.apps{
+	width:100%;
+	height:80px;
+	background-color: whitesmoke;
+	border-radius:5px;
+	margin-bottom:5px;
+	position: relative;
+}
+.apps{
+	width:100%;
+	height:80px;
+	background-color: whitesmoke;
+	border-radius:5px;
+	margin-bottom:5px;
+	position: relative;
+}
+.apps .appInformation{
+	width: calc(100% - 20px);
+    height: 80px;
+    float: right;
+    padding-left: 20px;
+    z-index:1;
+}
+.apps .appInformation .appName {
+	width: 95%;
+    height: 40px;
+    line-height: 50px;
+    font-family: 'Roboto', sans-serif;
+    color:#595959;
+    font-size: 20px;
+    cursor:pointer;
+    overflow: hidden;
+}
+.apps .appInformation .appName:hover {
+    color:rgb(243, 151, 0);
+}
+.apps .appInformation .appStartDate, .apps .appInformation .appLimit, .apps .appInformation .pepperMax{
+	height:30px;
+	line-height: 30px;
+	color:#b3b3b3;
+	font-size:12px;
+	font-family: 'Roboto', sans-serif;
+	float:left;
+}
+.apps .appInformation .appStartDate input.error, .apps .appInformation .appLimit input.error, .apps .appInformation .pepperMax input.error, input.error{
+	color: tomato !important;
+}
+.apps .appInformation .appLimit, .apps .appInformation .pepperMax{
+	margin-left: 10px;
+}
+.apps .appInformation .appStartDate input[type="text"], .apps .appInformation  .appLimit input[type="text"], .apps .appInformation  .pepperMax input{
+	background:transparent;
+	font-family: 'Roboto', sans-serif;
+	color:#b3b3b3;
+	font-size:12px;
+	text-align: center;
+	/*border-bottom: 1px solid #b3b3b3;*/
+	cursor:pointer;
+	height:20px;
+	border:none;
+}
+.apps .appInformation  .pepperMax input{
+	width:50px;
+}
+.apps .appInformation .appStartDate input[type="text"]:hover, .apps .appInformation  .appLimit input[type="text"]:hover, .apps .appInformation  .pepperMax input:hover{
+	color: rgb(243, 151, 0);
+	border:none;
+}
+.apps .appInformation .appStartDate input[type="text"]:focus, .apps .appInformation  .appLimit input[type="text"]:focus, .apps .appInformation  .pepperMax input:focus{
+	outline:none;
+	/*border-color: rgb(243, 151, 0);*/
+	color: rgb(243, 151, 0);
+	border:none;
+}
+.apps .appInformation{
+	width: calc(100% - 20px);
+    height: 80px;
+    float: right;
+    padding-left: 20px;
+    z-index:1;
+}
+#application_Content .apps .appInformation .appName {
+	width: 95%;
+    height: 40px;
+    line-height: 50px;
+    font-family: 'Roboto', sans-serif;
+    color:#595959;
+    font-size: 20px;
+    cursor:pointer;
+    overflow: hidden;
+}
+#application_Content .apps .appInformation .appName:hover {
+    color:rgb(243, 151, 0);
+}
+#application_Content .apps .appInformation .appName select{
+	width: 200px;
+    height: 20px;
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+    color:#595959;
+}
+#application_Content .apps .appInformation .appStartDate, #application_Content .apps .appInformation .appLimit, #application_Content .apps .appInformation .pepperMax{
+	height:30px;
+	line-height: 30px;
+	color:#b3b3b3;
+	font-size:12px;
+	font-family: 'Roboto', sans-serif;
+	float:left;
+}
+#application_Content .apps .appInformation .appStartDate input.error, #application_Content .apps .appInformation .appLimit input.error, #application_Content .apps .appInformation .pepperMax input.error{
+	color: tomato !important;
+}
+#application_Content .apps .appInformation .appLimit, #application_Content .apps .appInformation .pepperMax{
+	margin-left: 10px;
+}
+#application_Content .apps .appInformation .appStartDate input[type="text"], #application_Content .apps .appInformation  .appLimit input[type="text"], #application_Content .apps .appInformation  .pepperMax input[type="number"]{
+	background:transparent;
+	font-family: 'Roboto', sans-serif;
+	color:#b3b3b3;
+	font-size:12px;
+	text-align: center;
+	/*border-bottom: 1px solid #b3b3b3;*/
+	cursor:pointer;
+	height:20px;
+	border:none;
+}
+#application_Content .apps .appInformation  .pepperMax input[type="number"]{
+	width:50px;
+}
+#application_Content .apps .appInformation .appStartDate input[type="text"]:hover, #application_Content .apps .appInformation  .appLimit input[type="text"]:hover, #application_Content .apps .appInformation  .pepperMax input[type="number"]:hover{
+	color: rgb(243, 151, 0);
+	border:none;
+}
+#application_Content .apps .appInformation .appStartDate input[type="text"]:focus, #application_Content .apps .appInformation  .appLimit input[type="text"]:focus, #application_Content .apps .appInformation  .pepperMax input[type="number"]:focus{
+	outline:none;
+	/*border-color: rgb(243, 151, 0);*/
+	color: rgb(243, 151, 0);
+	border:none;
+}
+.appRemoveButton{
+	position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: gainsboro;
+}
+.appRemoveButton .fa{
+    cursor: pointer;
+}
+
+.appRemoveButton .fa:hover{
+    color: tomato;
+}
+.ui-selectmenu-menu{
+	z-index:500;
+	font-size:10px;
+}
+	
+#application_Content .ui-selectmenu-button{
+	width: 400px;
+    margin-top: 10px;
+    background: transparent;
+    border-radius: 0;
+    border: none;
+    padding:0;
+    font-size:20px;
+    font-family: 'Roboto', sans-serif;
+    color:#595959;
+}
+#application_Content .ui-selectmenu-button:hover{
+	color: #f39700;
+}
+#application_Content .ui-selectmenu-button:focus{
+	outline:none;
+}
+#application_Content .ui-selectmenu-button .ui-icon-triangle-1-s{
+	display: none;
+}
+#application_Content .ui-selectmenu-button .ui-selectmenu-text{
+	padding:0;
+}
+.ui-state-focus{
+	background-color:#f39700;
+	color: white;
+}
+#addAccountApplicationButton{
+	    width: calc(100% - 2px);
+    line-height: 72px;
+    height: 78px;
+    text-align: center;
+    background-color: whitesmoke;
+    /* margin-top: 5px; */
+    float: right;
+    /* position: absolute; */
+    /* top: 5px; */
+    /* right: 0; */
+    color: rgb(243, 151, 0);
+    font-family: 'Source Code Pro';
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px dashed;
+    font-size: 20px;
+    -webkit-transition: all .25s;
+       -moz-transition: all .25s;
+        -ms-transition: all .25s;
+         -o-transition: all .25s;
+            transition: all .25s;
+}
+#addAccountApplicationButton:hover{
+	color:white;
+    background-color: #ffce80;
+    font-family: 'Source Code Pro';
+}
+::-webkit-scrollbar{
+	display:none;
+}
+::-moz-scrollbar{
+	display:none;
+}
+::-ms-scrollbar{
+	display:none;
+}
+::-o-scrollbar{
+	display:none;
+}
+::scrollbar{
+	display:none;
+}
+#loading{
+	width:100%;
+	height:100%;
+	text-align: center;
+}
+.fa-circle-o-notch{
+	-webkit-animation-name: spin;
+    -webkit-animation-duration: 1000ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spin;
+    -moz-animation-duration: 1000ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spin;
+    -ms-animation-duration: 1000ms;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+    
+    animation-name: spin;
+    animation-duration: 1000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@-ms-keyframes spin {
+    from { -ms-transform: rotate(0deg); }
+    to { -ms-transform: rotate(360deg); }
+}
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+.unclickable{
+	pointer-events: none;
+}
+#applicationListPopup{
+    width: 400px;
+    height: 340px;
+    box-shadow: 1px 10px 50px grey;    
+    padding: 0;
+    overflow-y:scroll;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: -300px;
+    margin: auto;
+    background-color: white;
+    /*display: none;*/ 
+    opacity: 0;
+    -webkit-transition: all .25s;
+    -moz-transition: all .25s;
+    -ms-transition: all .25s;
+    -o-transition: all .25s;
+    transition: all .25s;
+    z-index: -1;
+}
+#applicationListPopup.active{
+	z-index:1000 !important;
+	bottom: 0 !important;
+	opacity: 1 !important;
+}
+#applicationListPopup #appList{
+	width:400px;
+	height:230px;
+	overflow-y:scroll;
+}
+#applicationListPopup #applicationListPopupCloseButton{
+	width: 100%;
+    text-align: right;
+    line-height: 9px;
+    cursor: pointer;
+    color: gainsboro;
+    font-size: 20px;
+}
+#applicationListPopup #applicationListPopupCloseButton:hover{
+	color: tomato;
+}
+#applicationListPopup .app{
+	width: calc(100% - 10px);
+    height: 50px;
+    background-color: whitesmoke;
+    line-height: 50px;
+    padding-left: 10px;
+    font-family: 'Roboto';
+    color:#595959;
+    cursor:pointer;
+    border-bottom:1px solid gainsboro;
+    overflow-y:hidden;
+}
+#applicationListPopup .app span{
+	display:inline-block;
+	line-height: normal;
+	vertical-align: middle;
+}
+#applicationListPopup .app:hover{
+	color:#333335;
+    background-color: #ffce80;
+}
+#applicationListPopup .app.disable{
+	pointer-events:none;
+	color: gainsboro;
+}
+.apps .minMaxApp{
+	pointer-events:auto;
+	width: 50px;
+    height: 50px;
+    position: absolute;
+    text-align: center;
+    line-height: 50px;
+    right: 10px;
+    top: 15px;
+    font-size: 30px;
+    color: #B3B3BB;
+    /* border: 1px solid #B3B3BB; */
+    border-radius: 5px;
+    cursor:pointer;
+}
+.apps{
+	min-height: 80px;
+	height: auto;
+}
+.apps .minMaxApp .fa:hover{
+	color:rgb(243, 151, 0);
+}
+.apps .pepperBodyIDList{
+	width: 100%;
+    /* margin-top: 80px; */
+    padding-top: 0;
+    display:none;
+    -webkit-transition: all 1s;
+       -moz-transition: all 1s;
+        -ms-transition: all 1s;
+         -o-transition: all 1s;
+            transition: all 1s;
+}
+.apps .pepperBodyIDList.show{
+	width: 100%;
+	display:block; /* margin-top: 80px; */
+    padding-top: 80px;
+}
+.apps .pepperBodyIDList .pepperBodyId{
+	width: 100%;
+    height: 30px;
+    background-color: #e6e6e6;
+}
+.apps .pepperBodyIDList .pepperBodyId .label{
+	height: 100%;
+    line-height: 30px;
+    font-size: 13px;
+    width: 100px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: #595959;
+    font-weight: bold;
+    float:left;
+}
+.apps .pepperBodyIDList .pepperBodyId .bodyId{
+	height: 100%;
+    line-height: 30px;
+    font-family: 'Roboto', sans-serif;
+    color: #b36e00;
+    font-size: 13px;
+}
+#applicationContent .apps_list{
+	width: 100%;
+	height:100%;
+	overflow-y:scroll;
+}
+#applicationContent .apps_list .app{
+	width: 200px;
+    height: 200px;
+    background-color: gainsboro;
+    margin-top: 20px;
+    margin-left: 20px;
+    text-align: center;
+    font-size: 25px;
+    font-family: 'roboto';
+    color: #808080;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    display: inline-block;
+    vertical-align: top;
+    padding:10px;
+    display: -webkit-inline-flex !important;
+  	display:         inline-flex !important;
+
+ 	-webkit-align-items: center !important;
+        align-items: center !important;
+
+  	-webkit-justify-content: center !important;
+        justify-content: center !important;
+    -webkit-transition: all .25s;
+       -moz-transition: all .25s;
+        -ms-transition: all .25s;
+         -o-transition: all .25s;
+            transition: all .25s;
+}
+#applicationContent .apps_list .app:hover{
+	-webkit-transform: scale(1.05);
+	   -moz-transform: scale(1.05);
+	    -ms-transform: scale(1.05);
+	     -o-transform: scale(1.05);
+	        transform: scale(1.05);
+	background-color: #8c8c8c;
+	color: white;
+	box-shadow: 1px 1px 30px grey;
+	z-index: 1;
+}
+.app_button_wrapper{
+	width: 100%;
+    height: calc(100% + 60px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transition: all .25s;
+       -moz-transition: all .25s;
+        -ms-transition: all .25s;
+         -o-transition: all .25s;
+            transition: all .25s;
+}
+.app_button_wrapper:hover{
+    height: 100%;
+}
+#applicationContent .apps_list .app .remove_app_button{
+	position: absolute;
+    width: 50px;
+    height: 50px;
+    bottom: 10px;
+    right: 10px;
+    color: #B3B3BB;
+    line-height: 50px;
+    font-size: 20px;
+    background-color: #737373;
+    cursor: pointer;
+    border-radius: 50%;
+}
+#applicationContent .apps_list .app .remove_app_button:hover{
+	background-color: #f39700;
+	color:white;
+}
+#applicationContent .apps_list .app .edit_app_button{
+	position: absolute;
+    width: 50px;
+    height: 50px;
+    bottom: 10px;
+    left: 10px;
+    color: #B3B3BB;
+    line-height: 50px;
+    font-size: 20px;
+    background-color: #737373;
+    cursor: pointer;
+    border-radius: 50%;
+}
+#applicationContent .apps_list .app .edit_app_button:hover{
+	background-color: #f39700;
+	color:white;
+}
+#addApplication_popup_form, #viewApplication_popup_form{
+	height:400px;
+}
+#addApplication_popup_form .popup_body, #viewApplication_popup_form .popup_body{
+	height: calc(100% - 130px);
+}
+#formLoading{
+	width:100%;
+	height:100%;
+	color:#ffce80;
+	position:absolute;
+	z-index:1;
+	top:0;
+	left:0;
+	background-color: white;
+	font-size: 50px;
+}
+#formLoading .fa, #formLoading img{
+	position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+}
+.inputError{
+	width: 100%;
+    font-size: 13px;
+    color: tomato;
+    height:15px;
+}
+.checkInput:hover{
+   	color:rgb(243, 151, 0);
+}
+#ui-datepicker-div{
+	z-index: 501 !important;
+}
+.ui-dialog {
+	z-index: 1000;
+}
+
+#hideStop { /*Richard*/
+	font-size: 15px;
+	float: right;
+	color: #f39700;
+}
+
+.addPlaceForm {
+    font-size: 13px;
+    padding: 0px 15px 0px 15px;
+    font-family: 'Montserrat', sans-serif;
+    color: #999999;
+    text-transform: uppercase;
+    position: absolute;
+}
+
+.addPlaceForm input{
+    width: 360px;
+    height: 25px;
+    font-size: 13px;
+    font-family: 'Roboto';
+    color: #999999;
+    padding: 0px;
+    transition: all .25s;
+    box-sizing: border-box;
+    margin: 6px 0;
+}
+
+ #addPlaceTitle {
+ 	font-size: 20px;
+    margin: 0;
+    padding: 0 10px 15px 15px;
+    text-transform: uppercase;
+    color: #999;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(243, 151, 0)
+ }
+
+/*.inputAddplace {
+    width: 360px;
+    height: 25px;
+    font-size: 13px;
+    font-family: 'Roboto';
+    color: #999999;
+    padding: 0px;
+    transition: all .25s;
+    box-sizing: border-box;
+}*/
+
+#Register_submit {
+	text-align: center;
+	font-size: 20px;
+}
+
+#Register_input {
+	display: none;
+}
+
+div#popup_registerbutton {
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    background-color: rgb(243, 151, 0);
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    margin: 15px auto;
+    cursor: pointer;
+    border-radius: 2px;
+    position: absolute;
+}
+
+div#popup_registerbuttonForm{
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    background-color: rgb(243, 151, 0);
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    margin: 15px auto;
+    cursor: pointer;
+    border-radius: 2px;
+    position: absolute;
+}
+
+#applicationListPopup.active {
+    padding: 20px;
+}
+
+p.addPlaceTitle {
+    font-size: 20px;
+    margin: 0;
+    padding: 0 10px 15px 15px;
+    text-transform: uppercase;
+    color:#999;
+    font-family: 'Montserrat', sans-serif;
+
+}
+/*input.inputAddplace {
+    margin: 6px 0;
+}
+*/
+input#popup_registerbutton {
+	width: 200px;
+    height: 44px;
+    text-align: center;
+    line-height: 40px;
+    background-color: rgb(243, 151, 0);
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    margin: 20px 0 0 90px;
+    cursor: pointer;
+    border-radius: 2px;
+    position: absolute;
+    font-size: 15px;
+    border: none;
+}
+input#popup_registerbuttonForm {
+	width: 200px;
+    height: 44px;
+    text-align: center;
+    line-height: 40px;
+    background-color: rgb(243, 151, 0);
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    margin: 20px 0 0 90px;
+    cursor: pointer;
+    border-radius: 2px;
+    position: absolute;
+    font-size: 15px;
+    border: none;
+}
+
+input#PnameUpdate:focus {
+    outline: none;
+    border: 1px solid #f39700;
+    color: #f39700;
+}
+
+input#PnameForm:focus {
+    outline: none;
+    border: 1px solid #f39700;
+    color: #f39700;
+}
+
+input#telUpdate:focus {
+	outline: none;
+    border: 1px solid #f39700;
+    color: #f39700;
+}
+input#telForm:focus {
+	outline: none;
+    border: 1px solid #f39700;
+    color: #f39700;
+}
+input#addUpdate:focus {
+	outline: none;
+    border: 1px solid #f39700;
+    color: #f39700;
+}
+input#addForm:focus {
+	outline: none;
+    border: 1px solid #f39700;
+    color: #f39700;
+}
+
+/*Joann*/
+.addPlaceBG {
+    z-index: 500;
+    background: rgba(0, 0, 0, 0.6) !important;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    min-width: 1000px;
+}
+
+.startAndEndPeriodAccount {
+    height: 40px;
+    line-height: 40px;
+    font-family: 'Montserrat', sans-serif;
+    color: #999999;
+    font-size: 13px;
+}
+
+input#startPeriodAddId {
+    border: none;
+    text-align: center;
+    color: #999999;
+    font-size: 13px;
+}
+
+input#startPeriodAddId:focus {
+    text-align: center;
+    outline: none;
+    color: #b3b3b3;
+}
+
+input#startPeriodAddId:hover {
+	text-align: center;
+    color: rgb(243, 151, 0);
+}
+
+input#endPeriodAddId {
+    border: none;
+    text-align: center;
+    color: #999999;
+    font-size: 13px;
+}
+
+input#endPeriodAddId:focus {
+    text-align: center;
+    outline: none;
+    color: #b3b3b3;
+}
+
+input#endPeriodAddId:hover {
+	text-align: center;
+    color: rgb(243, 151, 0);
+}
+
+.inputErrorP {
+    width: 100%;
+    font-size: 11px;
+    color: tomato;
+    height: 20px;
+}
+
+.inputErrorT {
+    width: 100%;
+    font-size: 11px;
+    color: tomato;
+    height: 20px;
+}
+
+.inputErrorA {
+    width: 100%;
+    font-size: 11px;
+    color: tomato;
+    height: 20px;
+}
+
+.inputErrorTp {
+    width: 100%;
+    font-size: 11px;
+    color: tomato;
+    height: 20px;
+}
+.inputErrorTt {
+    width: 100%;
+    font-size: 11px;
+    color: tomato;
+    height: 20px;
+}
+
+.inputErrorTa {
+    width: 100%;
+    font-size: 11px;
+    color: tomato;
+    height: 20px;
+}
+
+/* ADD PLACE FORM*/
+.PlaceInfo {
+    width: calc(100% - 20px);
+    background-color: #f5f5f5;
+    padding: 10px;
+    float: right;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    border-radius: 4px;
+}
+.PlaceInfo:hover {
+    background: #ffe2b3;
+    border-radius: 4px;
+}
+#PageInfoCloseButton {
+    width: 20px;
+    text-align: center;
+    color: #dcdcdc;
+    cursor: pointer;
+    float: right;
+    margin: 0;
+    position: relative;
+    left: 10px;
+    line-height: 25px;
+    bottom: 10px;
+    color: #b3b3b3;
+}
+#PageInfoCloseButton:hover {
+    color: rgb(243, 151, 0);
+}
+.placename {
+    width: 95%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color: #595959;
+    /*float: left;*/
+}
+#labelplace {
+    width: 109px;
+    float: left;
+    line-height: 20px;
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+    color: #999;
+}
+#nameVal {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    width: 100%;
+    color: #999;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+.placetel {
+    float: left;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    color: #999;
+    margin-right: 20px;
+    line-height: 30px;
+}
+#telVal {
+    float: right;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    color: #999;
+    margin-left: 5px;
+}
+.placeAdd {
+    float: left;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    /*width: 23%;*/
+    color: #999;
+    line-height: 30px;
+}
+#addVal {
+	float: right;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 13px;
+	color: #999;
+	margin-left: 5px;
+	text-transform: capitalize;
+}
+
+/*Joann*/
+/**PLACE VIEW**/
+.placeInfo {
+    width: calc(100% - 20px);
+    background-color: #f5f5f5;
+    padding: 10px;
+    float: right;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    border-radius: 4px;
+}
+.viewplacename {
+    width: 95%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    color: #999;
+    text-transform: uppercase;
+}
+.viewplacetel {
+    float: left;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    color: #999;
+    margin-right: 20px;
+    line-height: 30px;
+}
+.placeAddview {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    /*width: 23%;*/
+    color: #999;
+    line-height: 30px;
+}
+.placeRegister {
+	float: left;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    /*width: 23%;*/
+    color: #999;
+/*    line-height: 30px;*/
+    margin-right: 20px;
+}
+.placeUpdated {
+	float: left;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    /*width: 23%;*/
+    color: #999;
+    /*line-height: 30px;*/
+}
+input#placereg {
+    text-align: center;
+    border: none;
+    color: #999;
+    font-size: 13px;
+    background-color: #f5f5f5;
+    font-family: 'Montserrat', sans-serif;
+    width: 155px;
+}
+
+input#placeupdate {
+	text-align: center;
+    border: none;
+    color: #999;
+    font-size: 13px;
+    background-color: #f5f5f5;
+    font-family: 'Montserrat', sans-serif;
+    width: 155px;
+}
+
+input.focus:focus {
+    text-align: center;
+    outline: none;
+}
+
+.PlaceInfoEdit {
+    width: calc(100% - 20px);
+    background-color: #f5f5f5;
+    padding: 10px;
+    float: right;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    border-radius: 4px;
+}
+
+input[type="checkbox"] {
+  display: none; 
+}
+
+  input[type="checkbox"] + .switch-box {
+    width: 60px;
+    height: 30px;
+    padding: 2px;
+    background-color: #1284ff;
+    border-radius: 20px;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -ms-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear; 
+}
+
+    input[type="checkbox"] + .switch-box:before {
+      content: '';
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      background-color: white;
+      position: absolute;
+      top: calc(50% - (28px/2));
+      left: 33px;
+      -webkit-transition: all .2s linear;
+      -moz-transition: all .2s linear;
+      -ms-transition: all .2s linear;
+      -o-transition: all .2s linear;
+      transition: all .2s linear; 
+  }
+
+    input[type="checkbox"] + .switch-box:after {
+      content: 'ON';
+	    color: white;
+	    width: 29px;
+	    height: 27px;
+	    line-height: 29px;
+	    text-align: center;
+	    left: 3px;
+	    position: absolute;
+	    top: calc(50% - (28px/2));
+	    font-size: 11px;
+	    font-family: 'Geneva';
+  }
+
+  input[type="checkbox"]:not(:checked) + .switch-box {
+    background-color: gray; 
+}
+
+    input[type="checkbox"]:not(:checked) + .switch-box:before {
+      left: 3px; 
+  }
+    input[type="checkbox"]:not(:checked) + .switch-box:after {
+      content: '';
+      left: 30px; 
+  }
+
+.toggleB {
+    float: left;
+    padding: 10px;
+}

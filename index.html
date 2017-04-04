@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Account System</title>
+	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:200,300' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="Library/jqueryUI/jquery-ui.min.css">
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css"> -->
+	<link rel="stylesheet" href="Library/font-awesome-4.5.0/css/font-awesome.min.css">
+	
+
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/custom-popup.css">
+	<link rel="stylesheet" href="css/custom-alertDialog.css">
+	<link rel="stylesheet" href="css/custom-confimation-dialog.css">
+
+	<script src="Library/jquery-1.11.3.min.js"></script>
+	<script src="Library/jqueryUI/jquery-ui.min.js"></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.min.js"></script>-->
+</head>
+<body>
+	<div id="main_container" class="container">
+		<div id="containerHeaderWrapper">
+			<div id="appName">Account System</div>
+		</div>
+		<div id="containerBodyWrapper">
+			<div id="rightPanelWrapper">
+				<div id="accountContent" class="itemContentWrapper">
+					<div class="contentHeader">
+						Account List
+						<div id="addAccountButton">
+							<i class="fa fa-user-plus" aria-hidden="true"></i> Add Account
+						</div>
+
+						<div id="hideStop">
+							<div class="toggleB"> 
+								<input id="custom-switch-button" type="checkbox" checked>
+    							<label for="custom-switch-button" class="switch-box"></label>
+							</div>
+							<span id="buttonText"> Don't show stop accounts </span>
+						</div>
+					</div>
+					<div class="contentBody">
+						<div id="accountListWrapper">
+							<div id="accountListHeader">
+								<div>Client Name</div>
+								<div>Start Date</div>
+								<div>End Date</div>
+								<div>Add Place</div>
+								<div>View</div>
+								<div>Edit</div>
+								<div>Account Status</div>
+							</div>
+							<div id="accountList"></div>
+						</div>
+					</div>
+				</div>
+				<div id="applicationContent" class="itemContentWrapper">
+					<div class="contentHeader">
+						Application
+						<div id="addApplicationButton">
+							<i class="fa fa-plus-square" aria-hidden="true"></i> Add Application
+						</div>
+					</div>
+					<div class="contentBody">
+						<div class="apps_list"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="addPlaceBG">
+		<div class="try" id="applicationListPopup">
+			<i id="applicationListPopupCloseButton" class="fa fa-times" aria-hidden="true"></i>
+			<div id="appList">
+			</div>
+		</div>
+	</div>
+	
+	<script src="js/script.js"></script>
+	<script src="js/function.js"></script>
+	<script src="js/custom-popup.js"></script>
+	<script src="js/custom-alertDialog.js"></script>
+	<script src="js/custom-confirmDialog.js"></script>
+</body>
+</html>

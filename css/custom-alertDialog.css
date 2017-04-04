@@ -1,0 +1,68 @@
+.custom-alertDialog-popup{
+	width:350px;
+	height: 250px;
+	padding:0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: -300px;
+    margin: auto;
+    background-color: white;
+    opacity: 0;
+    -webkit-transition: all .25s;
+    -moz-transition: all .25s;
+    -ms-transition: all .25s;
+    -o-transition: all .25s;
+    transition: all .25s;
+}
+.custom-alertDialog-popup.active{
+	z-index:1000 !important;
+	box-shadow: 1px 10px 50px grey !important;
+    opacity: 1;
+    bottom:0;
+}
+.custom-alertDialog-popup #logo{
+	height: 130px;
+    font-size: 90px;
+    text-align: center;
+    color: white;
+    background-color: rgb(243, 151, 0);
+    line-height: 130px;
+}
+.custom-alertDialog-popup #text{
+	text-align: center;
+    height: 70px;
+    font-size: 20px;
+    color: rgb(243, 151, 0);
+    font-family: 'Montserrat', sans-serif;
+    line-height: 70px;
+}
+.custom-alertDialog-popup #text span{
+    display: inline-block;
+    line-height: normal;
+    vertical-align: middle;
+}
+.custom-alertDialog-popup #button{
+	width: 130px;
+    margin:auto;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    /* background-color: #F06A5E; */
+    color: rgb(243, 151, 0);
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    border: 1px solid rgb(243, 151, 0);
+    -webkit-transition: all .25s;
+       -moz-transition: all .25s;
+        -ms-transition: all .25s;
+         -o-transition: all .25s;
+            transition: all .25s;
+}
+.custom-alertDialog-popup #button:hover{
+   background-color: rgb(243, 151, 0);
+	color: white;
+}
